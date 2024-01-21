@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Some semantic (and some non-semantic) tags</title>
+    </head>
+    <body>
+        <header>
+            <h1>Another page that demonstrates other tags</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="semantic-html-01.html">Semantic HTML example 1</a>
+                </li>
+                <li>
+                    Semantic HTML example 2
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Common non-semantic tags</h2>
+
+            <!-- And now, a generic table. No meaning. -->
+            <table>
+                <caption>A generic table with non-semantic tags</caption>
+                <!-- thead means "this is the table's header" -->
+                <thead>
+                    <!-- tr means "table row" -->
+                    <tr>
+                        <!-- use th for each cell inside the header-->
+                        <th>Name</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <!-- the table body -->
+                <tbody>
+                    <tr>
+                        <td><code>table</code> and its children</td>
+                        <td>create tables, like this one</td>
+                    </tr>
+                    <tr>
+                        <td><code>dl</code> and children</td>
+                        <td>For definition lists; see below</td>
+                    </tr>
+                    <tr>
+                        <td><code>i</code>, <code>b</code></td>
+                        <td>For <i>italics</i> and <b>bold</b>, but do not use this; prefer the tags that mean why the text has to be italic or bold, such as <code>em</code> (emphasis) or <code>mark</code> (highlight due to relevance).</td>
+                    </tr>
+                    <tr>
+                        <td><code>div</code></td>
+                        <td>A generic block. Use if no better alternative exists.</td>
+                    </tr>
+                    <tr>
+                        <td><code>span</code></td>
+                        <td>A generic text. Use if no better alternative exists.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- "section" means: this is a unique section within the page -->
+            <section id="definitions">
+                <header>
+                    <h3>Some definitions</h3>
+                </header>
+                <dl>
+                    <dt>Mexico</dt>
+                    <dd>
+                        The name of a country, and also a state in that country, and also the capital of that country that is nonetheless not in the state of the same name.
+                    </dd>
+                    <dt>
+                        Element
+                    </dt>
+                    <dd>
+                        In HTML, a component of the page. It's represented by a tag.
+                    </dd>
+                </dl>
+            </section>
+
+            <section id="div-span-and-role">
+                <header>
+                    <h3>A note on "role"</h3>
+                </header>
+                <p>The attribute "role" provides <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">a role</a> to elements that do not have one.</p>
+                <p>For example, this is a mathematical expression: <span role="math">2 + 3 = 5</span>.</p>
+                <p role="note">Note: The ARIA role "note" can provide an aside when other tags do not make sense.</p>
+            </section>
+
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                <p>The <blockquote> HTML element indicates that the enclosed text is an extended quotation.</p>
+                <footer>&mdash; MDN Web Docs, <cite>&lt;blockquote&gt;: the Block Quotation element</cite></footer>
+            </blockquote>
+
+            <footer>
+                This work was made by Fernando Augusto L&oacute;pez Plascencia under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license. 
+            </footer>
+        </main>
+    </body>
+</html>

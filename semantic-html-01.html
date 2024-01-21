@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Some semantic (and some non-semantic) tags</title>
+    </head>
+    <body>
+        <!-- "header" means: this block is a header for its page or section -->
+        <header>
+            <h1>A page that demonstrates semantic tags</h1>
+        </header>
+
+        <!-- "nav" means: this block is destined for site navigation links -->
+        <nav>
+            <!-- "ul" means Unordered List (eg. with bullets) -->
+            <!-- there is also "ol", for Ordered List (eg. with numbers) -->
+            <!-- It is good practice to put any list in these tags, but they do not denote
+                    a meaning by themselves, so they're not semantic. -->
+            <ul>
+                <!-- inside "ul" or "ol", create list bullets with "li" tags. -->
+                <li>
+                    Semantic HTML example 1
+                </li>
+                <li>
+                    <a href="semantic-html-02.html">Semantic HTML example 2</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- "main" means: the "main" contents of the page go on this block -->
+        <main>
+            <h2>A subtitle</h2>
+            <p>
+                The tag <code>p</code>p means "a paragraph". It is not considered semantic, because it can apply to any text regardless of its meaning.
+            </p>
+
+            <!-- "section" means: this is a unique section within the page -->
+            <section id="some-facts">
+                <header>
+                    <h3>Some facts</h3>
+                </header>
+                <ol>
+                    <li>The <code>section</code> tag is semantic. Think of a newspaper:
+                        <ul>
+                            <li>"Sports" is a section within it.</li>
+                            <li>"Classified ads" is another section.</li>
+                        </ul>
+                    </li>
+                    <li>The <code>ol</code> and <code>li</code> tags are not semantic: they can be used in different contexts and do not carry additional meaning.</li>
+                    <li>You <strong>can</strong> mark the header and footer of a section - but can be useful. </li>
+                </ol>
+                <!-- "footer" means: this is the ending part of a page or section. -->
+                <footer>
+                    Remember these facts well! This is the end of the "Some facts" section.
+                </footer>
+            </section>
+
+            <section id="journal-of-a-tag">
+                <h3>The journal of a tag</h3>
+                <!-- "article" means: a type of block that repeats; think entries in a dictionary, or post listings in a blog index -->
+                <article class="journal-post" id="post-02">
+                    <!-- "time" means a specific time: the one specified by the datetime attribute.
+                         Can be used for times, dates, or (less frequently) durations. -->
+                    <time datetime="2023-11-08">November 8, 2023</time>
+                    <h4>I was born</h4>
+                    <p>Today, my author wrote me <em>for the first time</em>. It is <strong>marvelous</strong> to exist!</p>
+                    <p>By the way, although <code>strong</code> and <code>em</code> (for "emphasis") mark text, they do not convey a specific meaning
+                        and therefore they are not semantic.
+                    </p>
+                </article>
+                <article class="journal-post" id="post-01">
+                    <time datetime="2023-11-04">November 4, 2023</time>
+                    <h4>I was not born yet</h4>
+                    <p>Today, my author thought about writing me, but had no time and therefore I was not born.</p>
+                    <!-- "aside" means: anything that goes alongside the main contents of a page or section, such as
+                         explanatory notes. -->
+                    <aside>
+                        <p>
+                            An "author" is the creator of a text.
+                        </p>
+                    </aside>
+                    <footer>
+                        <p>
+                            Articles can have footers, too!
+                        </p>
+                    </footer>
+                </article>
+            </section>
+
+            <section id="the-figure-tag">
+                <h3>The <code>figure</code> tag</h3>
+                <p>The <code>figure</code> tag is multifacetic! Think of it as an illustration in a book.</p>
+                <!-- The "img" tag shows an image in the browser, but it has no meaning (although the "alt" tag can provide meaning.)-->
+                <!-- Wrap it in the "figure" tag and add the "figcaption" tag to give it a semantic context. -->
+                <figure>
+                    <img src="pexels-brett-jordan-998501.jpg" alt="A paper tag". />
+                    <figcaption>
+                        Photo by Brett Jordan from Pexels. <a href="https://www.pexels.com/photo/brown-tag-998501/">Download it here.</a>
+                    </figcaption>
+                </figure>
+
+                <p>You can also use it to put some example code.</p>
+                <figure>
+                    <pre>
+                        const a = 1;
+                        const b = 2;
+                        const c = a + b; // 3
+                    </pre>
+                </figure>
+
+                <p>By the way, <code>code</code> is semantic (it means "this is programming code") while "pre" is not (it's just "preformatted text").</p>
+            </section>
+
+            <details>
+                <summary>Disclosure:</summary>
+                Please note that the <code>details</code> and <code>summary</code> tags are also semantic.
+                You have reached <meter id="page-percentage" min="0" max="100" value="95">95 percent</meter> of the page. (<code>meter</code> is semantic.)
+            </details>
+
+            <footer>
+                This work was made by Fernando Augusto L&oacute;pez Plascencia under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license. 
+            </footer>
+        </main>
+    </body>
+</html>
